@@ -19,7 +19,7 @@ with st.sidebar:
     💡 Note: No API key required!
     ''')
     add_vertical_space(5)
-    st.write('Made with ❤️ by [Deepak](www.linkedin.com/in/deepak-kn)')
+    st.write('Made with ❤️ by [Deepak](https://linkedin.com/in/deepak-kn)')
 
 # Generate empty lists for generated and past.
 ## generated stores AI generated responses
