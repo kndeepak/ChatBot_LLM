@@ -6,7 +6,12 @@ from hugchat import hugchat
 
 st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
 
-# Sidebar contents
+import streamlit as st
+from streamlit_themes import st_material
+
+# Apply Material theme
+st.set_theme(st_material.theme)
+
 with st.sidebar:
     st.title('🤗💬 HugChat App')
     st.markdown(
@@ -15,7 +20,7 @@ with st.sidebar:
             .sidebar-title {
                 font-size: 30px;
                 font-weight: bold;
-                color: #ff69b4;
+                color: #ff4081;
                 margin-bottom: 20px;
             }
             
@@ -27,7 +32,7 @@ with st.sidebar:
             
             .sidebar-link {
                 font-size: 16px;
-                color: #0078e7;
+                color: #2979ff;
                 margin-top: 10px;
             }
         </style>
@@ -51,6 +56,7 @@ with st.sidebar:
     )
     add_vertical_space(5)
     st.markdown('<p class="sidebar-link">Made with ❤️ by <a href="https://linkedin.com/in/deepak-kn" target="_blank">Deepak</a></p>', unsafe_allow_html=True)
+
 
 
 # Generate empty lists for generated and past.
