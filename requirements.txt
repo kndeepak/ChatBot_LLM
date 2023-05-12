@@ -3,4 +3,5 @@ streamlit
 hugchat
 streamlit-chat
 streamlit-extras
+streamlit.components.material
 
