@@ -5,41 +5,43 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from hugchat import hugchat
 
 st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
-
 import streamlit as st
-from streamlit_themes import st_material
 
-# Apply Material theme
-st.set_theme(st_material.theme)
+# Apply Material theme styles
+st.markdown(
+    """
+    <style>
+        .sidebar .sidebar-content {
+            background-color: #fafafa;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2px 0px;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .sidebar .sidebar-content .sidebar-title {
+            font-size: 24px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .sidebar-content .sidebar-about {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .sidebar-content .sidebar-link {
+            font-size: 14px;
+            color: #2196f3;
+            margin-top: 10px;
+        }
+    </style>
+    """
+    , unsafe_allow_html=True
+)
 
 with st.sidebar:
-    st.title('🤗💬 HugChat App')
-    st.markdown(
-        """
-        <style>
-            .sidebar-title {
-                font-size: 30px;
-                font-weight: bold;
-                color: #ff4081;
-                margin-bottom: 20px;
-            }
-            
-            .sidebar-about {
-                font-size: 18px;
-                color: #333333;
-                margin-bottom: 20px;
-            }
-            
-            .sidebar-link {
-                font-size: 16px;
-                color: #2979ff;
-                margin-top: 10px;
-            }
-        </style>
-        """
-        , unsafe_allow_html=True
-    )
-    
+    st.markdown('<div class="sidebar-content">', unsafe_allow_html=True)
     st.markdown('<p class="sidebar-title">🤗💬 HugChat App</p>', unsafe_allow_html=True)
     st.markdown(
         """
@@ -54,8 +56,8 @@ with st.sidebar:
         """
         , unsafe_allow_html=True
     )
-    add_vertical_space(5)
     st.markdown('<p class="sidebar-link">Made with ❤️ by <a href="https://linkedin.com/in/deepak-kn" target="_blank">Deepak</a></p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 
