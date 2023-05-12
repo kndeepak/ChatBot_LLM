@@ -5,34 +5,42 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from hugchat import hugchat
 
 st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
+#import streamlit as st
+
 import streamlit as st
 
-# Apply Material theme styles
+# Apply custom styles
 st.markdown(
     """
     <style>
         .sidebar .sidebar-content {
-            background-color: #fafafa;
-            box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2px 0px;
+            background-color: #e6eaf0;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px 0px;
             border-radius: 5px;
             padding: 20px;
         }
 
         .sidebar .sidebar-content .sidebar-title {
-            font-size: 24px;
-            color: #e91e63;
+            font-size: 28px;
+            font-weight: bold;
+            color: #4682b4;
             margin-bottom: 20px;
         }
 
         .sidebar .sidebar-content .sidebar-about {
             font-size: 16px;
-            color: #333333;
+            color: #777777;
             margin-bottom: 20px;
+        }
+
+        .sidebar .sidebar-content .sidebar-about li {
+            list-style-type: disc;
+            margin-left: 20px;
         }
 
         .sidebar .sidebar-content .sidebar-link {
             font-size: 14px;
-            color: #2196f3;
+            color: #8fbc8f;
             margin-top: 10px;
         }
     </style>
@@ -58,6 +66,8 @@ with st.sidebar:
     )
     st.markdown('<p class="sidebar-link">Made with ❤️ by <a href="https://linkedin.com/in/deepak-kn" target="_blank">Deepak</a></p>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
+
+
 
 
 
