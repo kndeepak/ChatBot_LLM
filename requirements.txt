@@ -1,4 +1,5 @@
 
+--upgrade pip
 streamlit
 hugchat
 streamlit-chat
