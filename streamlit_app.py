@@ -9,17 +9,49 @@ st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
 # Sidebar contents
 with st.sidebar:
     st.title('🤗💬 HugChat App')
-    st.markdown('''
-    ## About
-    This app is an LLM-powered chatbot built using:
-    - [Streamlit](https://streamlit.io/)
-    - [HugChat](https://github.com/Soulter/hugging-chat-api)
-    - [OpenAssistant/oasst-sft-6-llama-30b-xor](https://huggingface.co/OpenAssistant/oasst-sft-6-llama-30b-xor) LLM model
+    st.markdown(
+        """
+        <style>
+            .sidebar-title {
+                font-size: 30px;
+                font-weight: bold;
+                color: #ff69b4;
+                margin-bottom: 20px;
+            }
+            
+            .sidebar-about {
+                font-size: 18px;
+                color: #333333;
+                margin-bottom: 20px;
+            }
+            
+            .sidebar-link {
+                font-size: 16px;
+                color: #0078e7;
+                margin-top: 10px;
+            }
+        </style>
+        """
+        , unsafe_allow_html=True
+    )
     
-    💡 Note: No API key required!
-    ''')
+    st.markdown('<p class="sidebar-title">🤗💬 HugChat App</p>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <p class="sidebar-about"><b>About</b></p>
+        <p class="sidebar-about">This app is an LLM-powered chatbot built using:</p>
+        <ul class="sidebar-about">
+            <li>Streamlit</li>
+            <li>HugChat</li>
+            <li>OpenAssistant/oasst-sft-6-llama-30b-xor LLM model</li>
+        </ul>
+        <p class="sidebar-about">💡 Note: No API key required!</p>
+        """
+        , unsafe_allow_html=True
+    )
     add_vertical_space(5)
-    st.write('Made with ❤️ by [Deepak](https://linkedin.com/in/deepak-kn)')
+    st.markdown('<p class="sidebar-link">Made with ❤️ by <a href="https://linkedin.com/in/deepak-kn" target="_blank">Deepak</a></p>', unsafe_allow_html=True)
+
 
 # Generate empty lists for generated and past.
 ## generated stores AI generated responses
