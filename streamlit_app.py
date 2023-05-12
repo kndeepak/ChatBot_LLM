@@ -8,9 +8,6 @@ st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
 
 import streamlit as st
 
-# Import Material UI
-import streamlit.components.material as m
-
 # Apply custom styles
 st.markdown(
     """
@@ -20,10 +17,6 @@ st.markdown(
             box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
             border-radius: 5px;
             padding: 20px;
-        }
-
-        .sidebar .sidebar-content {
-            padding: 0;
         }
 
         .sidebar .sidebar-title {
@@ -45,57 +38,31 @@ st.markdown(
             color: #9e6c4b;
             margin-top: 10px;
         }
-
-        .sidebar .sidebar-link a {
-            color: #9e6c4b;
-            text-decoration: none;
-        }
-
-        .sidebar .sidebar-link a:hover {
-            color: #982649;
-            text-decoration: underline;
-        }
     </style>
     """
     , unsafe_allow_html=True
 )
 
-# Create a sidebar
+# Create a sidebar using Bootstrap components
 with st.sidebar:
-
-    # Create a Material UI card
-    card = m.Card(
-        # Set the card's title
-        title="🤗💬 HugChat App",
-        # Set the card's body
-        body=m.Markdown(
-            """
-            <p class="sidebar-about">Welcome to the fancy world of HugChat!</p>
-            <p class="sidebar-about">This app is powered by the cutting-edge LLM (Language Model) technology and features a delightful chatbot experience.</p>
-            <p class="sidebar-about">Here are the amazing technologies we've used to build this app:</p>
-            <ul class="sidebar-about">
-                <li>Streamlit</li>
-                <li>HugChat</li>
-                <li>OpenAssistant/oasst-sft-6-llama-30b-xor LLM model</li>
-            </ul>
-            <p class="sidebar-about">And the best part? No API key required! Just start chatting and let the magic unfold. ✨</p>
-            """
-            , unsafe_allow_html=True
-        ),
-        # Set the card's color
-        color="#982649",
-        # Set the card's elevation
-        elevation=4,
+    st.markdown('<div class="sidebar">', unsafe_allow_html=True)
+    st.markdown('<h1 class="sidebar-title">🤗💬 HugChat App</h1>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <p class="sidebar-about">Welcome to the fancy world of HugChat!</p>
+        <p class="sidebar-about">This app is powered by the cutting-edge LLM (Language Model) technology and features a delightful chatbot experience.</p>
+        <p class="sidebar-about">Here are the amazing technologies we've used to build this app:</p>
+        <ul class="sidebar-about">
+            <li>Streamlit</li>
+            <li>HugChat</li>
+            <li>OpenAssistant/oasst-sft-6-llama-30b-xor LLM model</li>
+        </ul>
+        <p class="sidebar-about">And the best part? No API key required! Just start chatting and let the magic unfold. ✨</p>
+        """
+        , unsafe_allow_html=True
     )
-
-    # Add the card to the sidebar
-    st.sidebar.add_card(card)
-
-    # Add a link to the creator's LinkedIn profile
-    st.sidebar.markdown(
-        f"Made with ❤️ by <a href='https://linkedin.com/in/deepak-kn' target='_blank'>{deepak_name}</a>"
-    )
-
+    st.markdown('<p class="sidebar-link">Made with ❤️ by <a href="https://linkedin.com/in/deepak-kn" target="_blank">Deepak</a></p>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 
