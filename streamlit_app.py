@@ -5,68 +5,96 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from hugchat import hugchat
 
 st.set_page_config(page_title="HugChat - An LLM-powered Streamlit app")
-#import streamlit as st
 
 import streamlit as st
+
+# Import Material UI
+import streamlit.components.material as m
 
 # Apply custom styles
 st.markdown(
     """
     <style>
-        .sidebar .sidebar-content {
-            background-color: #e6eaf0;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 2px 0px;
+        .sidebar {
+            background-color: #f9f3eb;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.15);
             border-radius: 5px;
             padding: 20px;
         }
 
-        .sidebar .sidebar-content .sidebar-title {
+        .sidebar .sidebar-content {
+            padding: 0;
+        }
+
+        .sidebar .sidebar-title {
             font-size: 28px;
             font-weight: bold;
-            color: #4682b4;
+            color: #982649;
             margin-bottom: 20px;
         }
 
-        .sidebar .sidebar-content .sidebar-about {
+        .sidebar .sidebar-about {
+            font-size: 18px;
+            color: #666666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .sidebar .sidebar-link {
             font-size: 16px;
-            color: #777777;
-            margin-bottom: 20px;
-        }
-
-        .sidebar .sidebar-content .sidebar-about li {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        .sidebar .sidebar-content .sidebar-link {
-            font-size: 14px;
-            color: #8fbc8f;
+            color: #9e6c4b;
             margin-top: 10px;
+        }
+
+        .sidebar .sidebar-link a {
+            color: #9e6c4b;
+            text-decoration: none;
+        }
+
+        .sidebar .sidebar-link a:hover {
+            color: #982649;
+            text-decoration: underline;
         }
     </style>
     """
     , unsafe_allow_html=True
 )
 
+# Create a sidebar
 with st.sidebar:
-    st.markdown('<div class="sidebar-content">', unsafe_allow_html=True)
-    st.markdown('<p class="sidebar-title">🤗💬 HugChat App</p>', unsafe_allow_html=True)
-    st.markdown(
-        """
-        <p class="sidebar-about"><b>About</b></p>
-        <p class="sidebar-about">This app is an LLM-powered chatbot built using:</p>
-        <ul class="sidebar-about">
-            <li>Streamlit</li>
-            <li>HugChat</li>
-            <li>OpenAssistant/oasst-sft-6-llama-30b-xor LLM model</li>
-        </ul>
-        <p class="sidebar-about">💡 Note: No API key required!</p>
-        """
-        , unsafe_allow_html=True
-    )
-    st.markdown('<p class="sidebar-link">Made with ❤️ by <a href="https://linkedin.com/in/deepak-kn" target="_blank">Deepak</a></p>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
 
+    # Create a Material UI card
+    card = m.Card(
+        # Set the card's title
+        title="🤗💬 HugChat App",
+        # Set the card's body
+        body=m.Markdown(
+            """
+            <p class="sidebar-about">Welcome to the fancy world of HugChat!</p>
+            <p class="sidebar-about">This app is powered by the cutting-edge LLM (Language Model) technology and features a delightful chatbot experience.</p>
+            <p class="sidebar-about">Here are the amazing technologies we've used to build this app:</p>
+            <ul class="sidebar-about">
+                <li>Streamlit</li>
+                <li>HugChat</li>
+                <li>OpenAssistant/oasst-sft-6-llama-30b-xor LLM model</li>
+            </ul>
+            <p class="sidebar-about">And the best part? No API key required! Just start chatting and let the magic unfold. ✨</p>
+            """
+            , unsafe_allow_html=True
+        ),
+        # Set the card's color
+        color="#982649",
+        # Set the card's elevation
+        elevation=4,
+    )
+
+    # Add the card to the sidebar
+    st.sidebar.add_card(card)
+
+    # Add a link to the creator's LinkedIn profile
+    st.sidebar.markdown(
+        f"Made with ❤️ by <a href='https://linkedin.com/in/deepak-kn' target='_blank'>{deepak_name}</a>"
+    )
 
 
 
