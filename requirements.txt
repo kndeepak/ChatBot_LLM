@@ -4,4 +4,3 @@ streamlit
 hugchat
 streamlit-chat
 streamlit-extras
-git+https://github.com/streamlit/streamlit.git@master#subdirectory=components/material
