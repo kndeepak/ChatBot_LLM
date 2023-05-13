@@ -1,21 +1,8 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# 📦 Streamlit ChatBot using HugChat
 
-Description of the app ...
 
-## Demo App
+This app is powered by the cutting-edge LLM (Language Model) technology and features a delightful chatbot experience.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://starter-kit.streamlitapp.com/)
+## Click below for App
 
-## Section Heading
-
-This is filler text, please replace this with text for this section.
-
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://starter-kit.streamlitapp.com/](https://kndeepak-chatbot-llm-streamlit-app-1u7i2y.streamlit.app))
