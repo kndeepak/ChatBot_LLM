@@ -69,10 +69,10 @@ with st.sidebar:
 # Generate empty lists for generated and past.
 ## generated stores AI generated responses
 if 'generated' not in st.session_state:
-    st.session_state['generated'] = ["I'm HugChat, How may I help you?"]
+    st.session_state['generated'] = ["I'm HugChat Genie ✨ , How may I help you? "]
 ## past stores User's questions
 if 'past' not in st.session_state:
-    st.session_state['past'] = ['Hi!']
+    st.session_state['past'] = ['Vanakkam !']
 # Layout of input/response containers
 input_container = st.container()
 colored_header(label='', description='', color_name='blue-30')
