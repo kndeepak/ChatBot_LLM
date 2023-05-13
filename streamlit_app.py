@@ -46,18 +46,18 @@ st.markdown(
 # Create a sidebar using Bootstrap components
 with st.sidebar:
     st.markdown('<div class="sidebar">', unsafe_allow_html=True)
-    st.markdown('<h1 class="sidebar-title">🤗💬 HugChat App</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="sidebar-title">🤗💬 StreamLit ChatBot using HugFace</h1>', unsafe_allow_html=True)
     st.markdown(
         """
         <p class="sidebar-about">Welcome to the fancy world of HugChat!</p>
-        <p class="sidebar-about">This app is powered by the cutting-edge LLM (Language Model) technology and features a delightful chatbot experience.</p>
-        <p class="sidebar-about">Here are the amazing technologies we've used to build this app:</p>
+        <p class="sidebar-about">Behold, this wondrous application thrives upon the pinnacle of innovation, harnessing the might of the cutting-edge LLM (Language Model) technology. Immerse yourself in its enchanting realm, for it unveils a delightful chatbot experience beyond compare.</p>
+        <p class="sidebar-about">Behold, behold! Let me unveil the extraordinary technologies that have been artfully woven together to forge the very foundation of this illustrious creation. With meticulous craftsmanship, we have harnessed the prowess of these remarkable technologies, enabling the birth of this remarkable application. Feast your eyes upon this awe-inspiring amalgamation of technological marvels that has brought this app to life.</p>
         <ul class="sidebar-about">
             <li>Streamlit</li>
             <li>HugChat</li>
-            <li>OpenAssistant/oasst-sft-6-llama-30b-xor LLM model</li>
+            <li>OpenAssistant LLaMa 30B SFT 6</li>
         </ul>
-        <p class="sidebar-about">And the best part? No API key required! Just start chatting and let the magic unfold. ✨</p>
+        <p class="sidebar-about">And lo and behold, let me share the most delightful revelation of all! Cast aside your worries, for in this realm of wonder, no API key is required to unlock the secrets that lie within. Simply engage in conversation, and watch in sheer amazement as the enchanting magic unfolds before your very eyes. ✨</p>
         """
         , unsafe_allow_html=True
     )
